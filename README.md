@@ -1,4 +1,4 @@
-# sherise-prusinksi-p1
+# Task list management application
 
 <b>Project Description:</b>
 
