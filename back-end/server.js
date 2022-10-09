@@ -64,7 +64,7 @@ app.post(
                         .status(400)
                         .json({ errors: [{ msg: 'Task already exists' }] });
                 }
-                task = Task.create(req.body);
+                task = await Task.create(req.body);
                 return success(res, task);
             } catch (error) {
                 next({ status: 400, message: "Failed to create task" })
@@ -74,6 +74,6 @@ app.post(
 );
 
 app.listen(PORT, () => {
-    // listening on port 3000
+    // listening on port
     console.log(`listening on port ${PORT}`) // print this when the server starts
 })
