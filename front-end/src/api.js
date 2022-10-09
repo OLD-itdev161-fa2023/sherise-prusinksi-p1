@@ -36,8 +36,8 @@ async function updateTask(id, payload) {
 }
 
 async function getTasks() {
-    const { data: todos } = await axios.get(API_URL)
-    return todos
+    const { data: tasks } = await axios.get(API_URL)
+    return tasks
 }
 
 
