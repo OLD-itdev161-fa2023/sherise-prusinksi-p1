@@ -4,7 +4,8 @@ import api from "./api"
 
 function App() {
   const [tasks, setTasks] = useState([])
-  const [task, setTask] = useState("")
+  const [taskDesc, setTask] = useState("")
+  let task;
 
   useEffect(() => {
     const fetchTaskAndSetTasks = async () => {
@@ -16,7 +17,7 @@ function App() {
 
   const createTask = async e => {
     e.preventDefault()
-    const newTask = await api.createTask(task)
+    const newTask = await api.createTask(taskDesc)
     setTasks([...tasks, newTask])
   }
 
@@ -46,7 +47,7 @@ function App() {
         <input
           id="task-input"
           type="text"
-          value={task}
+          value={taskDesc}
           onChange={({ target }) => setTask(target.value)}
         />
         <button type="button" onClick={createTask}>
