@@ -88,6 +88,26 @@ app.get("/tasks", async (req, res, next) => {
     }
 })
 
+/**
+* @route DELETE 
+* @desc Delete a task
+*/
+app.delete("/tasks/:id", async (req, res, next) => {
+    try {
+        await Task.findByIdAndRemove(req.params.id)
+        return success(res, "Task deleted!")
+    } catch (err) {
+        next({ status: 400, message: "failed to delete task" })
+    }
+})
+
+app.use((err, req, res, next) => {
+    return res.status(err.status || 400).json({
+        status: err.status || 400,
+        message: err.message || "there was an error processing request",
+    })
+})
+
 app.listen(PORT, () => {
     // listening on port
     console.log(`listening on port ${PORT}`) // print this when the server starts

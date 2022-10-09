@@ -147,6 +147,30 @@
 			]
 		},
 		{
+			"name": "Delete a task",
+			"item": [
+				{
+					"name": "Delete a task",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/tasks/6342d4ce0cfe35f0b1626109",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tasks",
+								"6342d4ce0cfe35f0b1626109"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Connection Check",
 			"request": {
 				"method": "GET",
