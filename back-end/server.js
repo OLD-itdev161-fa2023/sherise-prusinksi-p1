@@ -12,9 +12,14 @@ const cors = require('cors');
 app.use(express.json({ extended: false }));
 app.use(
     cors({
-        origin: 'http://localhost:' + PORT
+        origin: 'http://localhost:8080'
     })
 );
+
+app.use(function (req, res, next) {
+    res.header('Access-Control-Allow-Methods', 'POST, GET');
+    next();
+});
 
 connectDatabase(); //Connect to mongoDB database
 
@@ -59,18 +64,10 @@ app.post(
                         .status(400)
                         .json({ errors: [{ msg: 'Task already exists' }] });
                 }
-
-                task = new Task({
-                    taskDescription: taskDescription,
-                    completed: completed
-                })
-
-                //Save to the db and return
-                await task.save();
-
+                task = Task.create(req.body);
                 return success(res, task);
             } catch (error) {
-                next({ status: 400, message: "Failed to create task with error : " + error })
+                next({ status: 400, message: "Failed to create task" })
             }
         }
     }
