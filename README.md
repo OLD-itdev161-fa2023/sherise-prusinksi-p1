@@ -36,6 +36,7 @@ Demo :
 ![Alt text](demo/AddTask.png?raw=true "Add Task") <br>
 
 3. <b> Get all tasks</b>  : Upon first loading the application already existing tasks can be retrieved<br>
+![Alt text](demo/MongoDB.png?raw=true "MongoDB objects") <br>
 ![Alt text](demo/GetAllTasks.png?raw=true "Get All Tasks") <br>
 
 4. <b> Updating a task</b> : By clicking on task text it can be marked as complete<br>
