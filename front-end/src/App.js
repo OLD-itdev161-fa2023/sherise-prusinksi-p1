@@ -20,6 +20,14 @@ function App() {
     setTasks([...tasks, newTask])
   }
 
+  const deleteTask = async (e, id) => {
+    try {
+      e.stopPropagation()
+      await api.deleteTask(id)
+      setTasks(tasks.filter(({ _id: i }) => id !== i))
+    } catch (err) { }
+  }
+
   return (
     <div className="App" >
       <header className="App-header">
@@ -39,6 +47,7 @@ function App() {
           {tasks.map(({ _id, taskDescription, completed }, i) => (
             <li key={i}>
               {taskDescription}
+              {task} <span onClick={e => deleteTask(e, _id)}>X</span>
             </li>
           ))}
         </ul>
