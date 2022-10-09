@@ -1,4 +1,7 @@
 # sherise-prusinksi-p1
+
+<b>Project Description:</b>
+
 Project 1 - TaskKeeper Application
 
 This is a TaskKeeper application which allows any user to manage tasks.
@@ -8,6 +11,8 @@ This application will provide following functionalities :
 2) Getting all tasks
 3) Updating a task
 4) Deleting a task
+
+<b>Feature List : </b>
 
 The structure of the project is primarily :
 1) back-end    NodeJS, Express and MongoDB based REST APIs
