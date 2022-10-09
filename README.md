@@ -32,11 +32,11 @@ Demo :
 1. <b> Postman REST requests</b> <br>
 ![Alt text](demo/Postman.png?raw=true "Postman REST requests") <br>
 
-2. <b> Get all tasks</b>  : Upon first loading the application already existing tasks can be retrieved<br>
-![Alt text](demo/GetAllTasks.png?raw=true "Get All Tasks") <br>
-
 2. <b> Adding a new task</b>  : A new task description can be entered in the input textbox and by clicking Add button<br>
 ![Alt text](demo/AddTask.png?raw=true "Add Task") <br>
+
+3. <b> Get all tasks</b>  : Upon first loading the application already existing tasks can be retrieved<br>
+![Alt text](demo/GetAllTasks.png?raw=true "Get All Tasks") <br>
 
 4. <b> Updating a task</b> : By clicking on task text it can be marked as complete<br>
 ![Alt text](demo/UpdatedTask.png?raw=true "Updating A Task") <br>
