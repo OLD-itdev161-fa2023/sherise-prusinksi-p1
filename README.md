@@ -29,6 +29,13 @@ Postman REST requests are part of TaskKeeper.postman_collection.json.
 
 Demo :
 
+to run the program go to the repository root directory
+
+1) to run back-end server : npm run back-end
+2) to run front-end client : npm run front-end
+
+Screenshots:
+
 1. <b> Postman REST requests</b> <br>
 ![Alt text](demo/Postman.png?raw=true "Postman REST requests") <br>
 
