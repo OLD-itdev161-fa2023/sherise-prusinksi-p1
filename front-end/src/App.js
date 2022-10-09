@@ -28,9 +28,9 @@ function App() {
           Add
         </button>
         <ul>
-          {tasks.map(({ _id, task, completed }, i) => (
+          {tasks.map(({ _id, taskDescription, completed }, i) => (
             <li>
-              {task}
+              {taskDescription}
             </li>
           ))}
         </ul>
