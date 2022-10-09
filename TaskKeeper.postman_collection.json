@@ -124,6 +124,29 @@
 			]
 		},
 		{
+			"name": "Get all tasks",
+			"item": [
+				{
+					"name": "valid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Connection Check",
 			"request": {
 				"method": "GET",

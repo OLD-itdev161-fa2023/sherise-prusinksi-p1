@@ -14,18 +14,13 @@ async function createTask(task) {
                 'Content-Type': 'application/json'
             }
         });
-        if (!response.ok) {
-            if (response.status === 400 || response.status === 422) {
-                alert(response.data.errors[0].msg);
-            } else if (response.status !== 200) {
-                alert("Dunno what happened ¯\_(ツ)_/¯");
-            }
-            throw new Error(response);
-        }
-        else
+        if (response.status === 400 || response.status === 422) {
+            throw new Error(response.data.errors.msg);
+        } else {
             return response.data;
+        }
     } catch (exception) {
-        alert(exception);
+        alert("Error :" + exception);
     }
     return params;
 }

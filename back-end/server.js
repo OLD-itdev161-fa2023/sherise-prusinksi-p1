@@ -65,13 +65,28 @@ app.post(
                         .json({ errors: [{ msg: 'Task already exists' }] });
                 }
                 task = await Task.create(req.body);
-                return success(res, task);
-            } catch (error) {
-                next({ status: 400, message: "Failed to create task" })
+                let payload = await Task.findOne({ taskDescription: taskDescription });
+                return success(res, payload);
+            } catch (exception) {
+                console.log(exception);
+                next({ status: 400, message: "Failed to create task due to error : " + exception })
             }
         }
     }
 );
+
+/**
+* @route GET 
+* @desc Get all tasks
+*/
+app.get("/tasks", async (req, res, next) => {
+    try {
+        const tasks = await Task.find({})
+        return success(res, tasks)
+    } catch (exception) {
+        next({ status: 400, message: "failed to get tasks due to error : " + exception })
+    }
+})
 
 app.listen(PORT, () => {
     // listening on port
