@@ -24,6 +24,18 @@
   color: white;
 }
 
+.completed {
+  text-align: left;
+  text-decoration: line-through;
+  color: darkgreen;
+}
+
+.pending {
+  text-align: left;
+  text-decoration: double;
+  color: darkred;
+}
+
 .App-link {
   color: #61dafb;
 }

@@ -28,6 +28,15 @@ function App() {
     } catch (err) { }
   }
 
+  const updateTask = async (e, id) => {
+    e.stopPropagation()
+    const payload = {
+      completed: !tasks.find(task => task._id === id).completed,
+    }
+    const updatedTask = await api.updateTask(id, payload)
+    setTasks(tasks.map(task => (task._id === id ? updatedTask : task)))
+  }
+
   return (
     <div className="App" >
       <header className="App-header">
@@ -45,7 +54,10 @@ function App() {
         </button>
         <ul>
           {tasks.map(({ _id, taskDescription, completed }, i) => (
-            <li key={i}>
+            <li key={i}
+              onClick={e => updateTask(e, _id)}
+              className={completed ? "completed" : "pending"}
+            >
               {taskDescription}
               {task} <span onClick={e => deleteTask(e, _id)}>X</span>
             </li>
