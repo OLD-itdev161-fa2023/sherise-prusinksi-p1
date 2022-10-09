@@ -10,8 +10,8 @@ This application will provide following functionalities :
 4) Deleting a task
 
 The structure of the project is primarily :
-back-end    NodeJS, Express and MongoDB based REST APIs
-front-end   ReactJS based Web UI
+1) back-end    NodeJS, Express and MongoDB based REST APIs
+2) front-end   ReactJS based Web UI
 
 back-end will provide the following REST APIs :
 1) POST   /tasks       Adding a new task
