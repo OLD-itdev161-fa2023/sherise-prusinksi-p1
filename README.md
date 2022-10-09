@@ -26,3 +26,17 @@ back-end will provide the following REST APIs :
 
 front-end will provide the web user-interface to use these back-end APIs as a user-friendly and intuitive ReactJS based web-application.
 Postman REST requests are part of TaskKeeper.postman_collection.json.
+
+Demo :
+
+1. <b> Postman REST requests</b> <br>
+![Alt text](demo/Postman.png?raw=true "Postman REST requests") <br>
+
+2. <b> Get all tasks</b> <br>
+![Alt text](demo/GetAllTasks.png?raw=true "Get All Tasks") <br>
+
+3. <b> Updating a task</b> <br>
+![Alt text](demo/UpdatedTask.png?raw=true "Updating A Task") <br>
+
+4. <b> Deleting a task</b> <br>
+![Alt text](demo/DeletedTask.png?raw=true "Deleting A Task") <br>
