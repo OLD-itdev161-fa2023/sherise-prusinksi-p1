@@ -171,6 +171,40 @@
 			]
 		},
 		{
+			"name": "Update a task",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"completed\": true\n}"
+						},
+						"url": {
+							"raw": "localhost:8081/tasks/6342d4d60cfe35f0b1626111",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tasks",
+								"6342d4d60cfe35f0b1626111"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Connection Check",
 			"request": {
 				"method": "GET",

@@ -96,15 +96,30 @@ app.delete("/tasks/:id", async (req, res, next) => {
     try {
         await Task.findByIdAndRemove(req.params.id)
         return success(res, "Task deleted!")
-    } catch (err) {
+    } catch (exception) {
         next({ status: 400, message: "failed to delete task" })
     }
 })
 
-app.use((err, req, res, next) => {
-    return res.status(err.status || 400).json({
-        status: err.status || 400,
-        message: err.message || "there was an error processing request",
+/**
+* @route PUT 
+* @desc Update a task as completed
+*/
+app.put("/tasks/:id", async (req, res, next) => {
+    try {
+        const task = await Task.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+        })
+        return success(res, task)
+    } catch (exception) {
+        next({ status: 400, message: "failed to update task" })
+    }
+})
+
+app.use((error, req, res, next) => {
+    return res.status(error.status || 400).json({
+        status: error.status || 400,
+        message: error.message || "there was an error processing request",
     })
 })
 
