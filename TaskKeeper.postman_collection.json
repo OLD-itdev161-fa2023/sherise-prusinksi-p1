@@ -155,14 +155,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8081/tasks/6342d4ce0cfe35f0b1626109",
+							"raw": "localhost:8081/tasks/6342fffeebbaae47630a6b0f",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
 								"tasks",
-								"6342d4ce0cfe35f0b1626109"
+								"6342fffeebbaae47630a6b0f"
 							]
 						}
 					},
@@ -174,7 +174,7 @@
 			"name": "Update a task",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Update a task",
 					"request": {
 						"method": "PUT",
 						"header": [
@@ -189,14 +189,14 @@
 							"raw": "{\n    \"completed\": true\n}"
 						},
 						"url": {
-							"raw": "localhost:8081/tasks/6342d4d60cfe35f0b1626111",
+							"raw": "localhost:8081/tasks/6342fffeebbaae47630a6b0f",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
 								"tasks",
-								"6342d4d60cfe35f0b1626111"
+								"6342fffeebbaae47630a6b0f"
 							]
 						}
 					},
